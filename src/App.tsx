@@ -4,15 +4,17 @@ import NatalChart from './pages/NatalChart';
 import Synastry from './pages/Synastry';
 import Horoscope from './pages/Horoscope';
 import { Compass, Heart, Sparkles, Home as HomeIcon } from 'lucide-react';
+import Starfield from './components/Starfield';
 
 export default function App() {
   const [route, setRoute] = useState('/');
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden flex flex-col font-sans">
+      <Starfield />
       {/* Dynamic Cosmic Background Elements */}
-      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/10 blur-[120px] pointer-events-none"></div>
-      <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-secondary/10 blur-[150px] pointer-events-none"></div>
+      <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] rounded-full bg-primary/20 animate-nebula [animation-delay:-10s] blur-[120px] pointer-events-none"></div>
+      <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-secondary/20 animate-nebula [animation-delay:-10s] blur-[150px] pointer-events-none"></div>
 
       <nav className="p-4 flex flex-wrap gap-4 justify-center items-center bg-surface/80 backdrop-blur-md border-b border-white/5 sticky top-0 z-50 shadow-lg">
         <button
