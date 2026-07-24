@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-background text-text;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+@keyframes nebula-pulse {
+  0% { transform: scale(1) translate(0, 0); opacity: 0.1; }
+  50% { transform: scale(1.1) translate(2%, 2%); opacity: 0.15; }
+  100% { transform: scale(1) translate(0, 0); opacity: 0.1; }
+}
+
+.animate-nebula {
+  animation: nebula-pulse 20s infinite ease-in-out;
+}
